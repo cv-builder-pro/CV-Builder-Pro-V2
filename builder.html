@@ -1,1 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Builder | CV Builder Pro AI</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/builder.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="icon" href="assets/images/logo/favicon.png">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="index.html" class="logo">
+
+            <img src="assets/images/logo/logo.png" alt="Logo">
+
+        </a>
+
+        <nav class="nav">
+
+            <a href="index.html">Home</a>
+            <a href="templates.html">Templates</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="dashboard.html">Dashboard</a>
+
+        </nav>
+
+        <div class="header-buttons">
+
+            <a href="profile.html" class="btn-login">
+                My Profile
+            </a>
+
+            <a href="dashboard.html" class="btn-primary">
+                Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ================= BUILDER ================= -->
+
+<section class="builder-section">
+
+    <div class="builder-container">
+
+        <!-- LEFT PANEL -->
+
+        <aside class="builder-sidebar">
+
+            <h2>
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                Resume Builder
+
+            </h2>
+
+            <ul class="builder-menu">
+
+                <li><i class="fa-solid fa-user"></i> Personal Info</li>
+
+                <li><i class="fa-solid fa-graduation-cap"></i> Education</li>
+
+                <li><i class="fa-solid fa-briefcase"></i> Experience</li>
+
+                <li><i class="fa-solid fa-code"></i> Skills</li>
+
+                <li><i class="fa-solid fa-folder-open"></i> Projects</li>
+
+                <li><i class="fa-solid fa-language"></i> Languages</li>
+
+                <li><i class="fa-solid fa-award"></i> Certificates</li>
+
+                <li><i class="fa-solid fa-share-nodes"></i> Social Links</li>
+
+            </ul>
+
+        </aside>
+
+        <!-- FORM AREA -->
+
+        <main class="builder-form">
+
+            <div class="form-card">
+
+                <h2>
+
+                    Resume Information
+
+                </h2>
+
+                <p>
+
+                    Complete your resume step by step.
+
+                </p>
+
+                <!-- Part 2 se form yahan shuru hoga -->
+
+            </div>
+
+        </main>
+
+        <!-- LIVE PREVIEW -->
+
+        <aside class="resume-preview">
+
+            <div class="resume-paper">
+
+                <h1 id="previewName">
+
+                    Your Name
+
+                </h1>
+
+                <h3 id="previewTitle">
+
+                    Professional Title
+
+                </h3>
+
+                <hr>
+
+                <p>
+
+                    Live Resume Preview will appear here.
+
+                </p>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+<!-- ================= PERSONAL INFORMATION ================= -->
+
+<div class="form-section">
+
+    <h3>
+        <i class="fa-solid fa-user"></i>
+        Personal Information
+    </h3>
+
+    <!-- Profile Photo -->
+
+    <div class="form-group">
+
+        <label>Profile Photo</label>
+
+        <input type="file"
+               id="profilePhoto"
+               accept="image/*">
+
+    </div>
+
+    <!-- Full Name -->
+
+    <div class="form-group">
+
+        <label>Full Name</label>
+
+        <input type="text"
+               id="fullName"
+               placeholder="Enter your full name">
+
+    </div>
+
+    <!-- Professional Title -->
+
+    <div class="form-group">
+
+        <label>Professional Title</label>
+
+        <input type="text"
+               id="jobTitle"
+               placeholder="Frontend Developer">
+
+    </div>
+
+    <!-- Email -->
+
+    <div class="form-group">
+
+        <label>Email Address</label>
+
+        <input type="email"
+               id="email"
+               placeholder="example@email.com">
+
+    </div>
+
+    <!-- Phone -->
+
+    <div class="form-group">
+
+        <label>Phone Number</label>
+
+        <input type="tel"
+               id="phone"
+               placeholder="+92 300 1234567">
+
+    </div>
+
+    <!-- Address -->
+
+    <div class="form-group">
+
+        <label>Address</label>
+
+        <input type="text"
+               id="address"
+               placeholder="Lahore, Pakistan">
+
+    </div>
+
+    <!-- LinkedIn -->
+
+    <div class="form-group">
+
+        <label>LinkedIn</label>
+
+        <input type="url"
+               id="linkedin"
+               placeholder="https://linkedin.com/in/username">
+
+    </div>
+
+    <!-- GitHub -->
+
+    <div class="form-group">
+
+        <label>GitHub</label>
+
+        <input type="url"
+               id="github"
+               placeholder="https://github.com/username">
+
+    </div>
+
+    <!-- Website -->
+
+    <div class="form-group">
+
+        <label>Portfolio Website</label>
+
+        <input type="url"
+               id="website"
+               placeholder="https://yourwebsite.com">
+
+    </div>
+
+    <!-- Summary -->
+
+    <div class="form-group">
+
+        <label>Professional Summary</label>
+
+        <textarea id="summary"
+                  rows="6"
+                  placeholder="Write a short professional summary..."></textarea>
+
+    </div>
+
+</div>
+  <!-- ================= EDUCATION ================= -->
+
+<div class="form-section">
+
+    <h3>
+        <i class="fa-solid fa-graduation-cap"></i>
+        Education
+    </h3>
+
+    <div id="educationContainer">
+
+        <!-- Education Block -->
+
+        <div class="education-item">
+
+            <div class="form-group">
+
+                <label>Degree</label>
+
+                <input type="text"
+                       class="degree"
+                       placeholder="Bachelor of Computer Science">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Institute / University</label>
+
+                <input type="text"
+                       class="institute"
+                       placeholder="University Name">
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Start Year</label>
+
+                    <input type="month"
+                           class="eduStart">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>End Year</label>
+
+                    <input type="month"
+                           class="eduEnd">
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Grade / CGPA</label>
+
+                <input type="text"
+                       class="grade"
+                       placeholder="3.80 CGPA / A Grade">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Description</label>
+
+                <textarea class="eduDescription"
+                          rows="4"
+                          placeholder="Achievements, activities or relevant coursework..."></textarea>
+
+            </div>
+
+            <button type="button"
+                    class="remove-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Remove Education
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <button type="button"
+            id="addEducation"
+            class="btn-primary">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Add Education
+
+    </button>
+
+</div>
+  <!-- ================= EXPERIENCE ================= -->
+
+<div class="form-section">
+
+    <h3>
+        <i class="fa-solid fa-briefcase"></i>
+        Work Experience
+    </h3>
+
+    <div id="experienceContainer">
+
+        <!-- Experience Block -->
+
+        <div class="experience-item">
+
+            <div class="form-group">
+
+                <label>Job Title</label>
+
+                <input type="text"
+                       class="jobPosition"
+                       placeholder="Frontend Developer">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Company Name</label>
+
+                <input type="text"
+                       class="companyName"
+                       placeholder="Google Inc.">
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Start Date</label>
+
+                    <input type="month"
+                           class="jobStart">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>End Date</label>
+
+                    <input type="month"
+                           class="jobEnd">
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    <input type="checkbox"
+                           class="currentlyWorking">
+
+                    Currently Working Here
+
+                </label>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Location</label>
+
+                <input type="text"
+                       class="jobLocation"
+                       placeholder="Lahore, Pakistan">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Job Description</label>
+
+                <textarea class="jobDescription"
+                          rows="6"
+                          placeholder="Describe your responsibilities, achievements and technologies used..."></textarea>
+
+            </div>
+
+            <button type="button"
+                    class="remove-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Remove Experience
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <button type="button"
+            id="addExperience"
+            class="btn-primary">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Add Experience
+
+    </button>
+
+</div>
+  <!-- ================= SKILLS ================= -->
+
+<div class="form-section">
+
+    <h3>
+        <i class="fa-solid fa-code"></i>
+        Skills
+    </h3>
+
+    <div id="skillsContainer">
+
+        <div class="skill-item">
+
+            <div class="form-group">
+
+                <label>Skill</label>
+
+                <input type="text"
+                       class="skillName"
+                       placeholder="HTML, CSS, JavaScript">
+
+            </div>
+
+            <button type="button" class="remove-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Remove Skill
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <button type="button"
+            id="addSkill"
+            class="btn-primary">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Add Skill
+
+    </button>
+
+</div>
+
+<!-- ================= LANGUAGES ================= -->
+
+<div class="form-section">
+
+    <h3>
+        <i class="fa-solid fa-language"></i>
+        Languages
+    </h3>
+
+    <div id="languagesContainer">
+
+        <div class="language-item">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Language</label>
+
+                    <input type="text"
+                           class="languageName"
+                           placeholder="English">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Proficiency</label>
+
+                    <select class="languageLevel">
+
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option selected>Professional</option>
+                        <option>Native</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <button type="button"
+                    class="remove-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Remove Language
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <button type="button"
+            id="addLanguage"
+            class="btn-primary">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Add Language
+
+    </button>
+
+</div>
+
+<!-- ================= HOBBIES ================= -->
+
+<div class="form-section">
+
+    <h3>
+        <i class="fa-solid fa-heart"></i>
+        Interests / Hobbies
+    </h3>
+
+    <div id="hobbiesContainer">
+
+        <div class="hobby-item">
+
+            <div class="form-group">
+
+                <label>Interest</label>
+
+                <input type="text"
+                       class="hobbyName"
+                       placeholder="Reading, Traveling, Photography">
+
+            </div>
+
+            <button type="button"
+                    class="remove-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Remove Interest
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <button type="button"
+            id="addHobby"
+            class="btn-primary">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Add Interest
+
+    </button>
+
+</div>
+  <!-- ================= PROJECTS ================= -->
+
+<div class="form-section">
+
+    <h3>
+        <i class="fa-solid fa-folder-open"></i>
+        Projects
+    </h3>
+
+    <div id="projectsContainer">
+
+        <div class="project-item">
+
+            <div class="form-group">
+
+                <label>Project Name</label>
+
+                <input type="text"
+                       class="projectName"
+                       placeholder="CV Builder Pro AI">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Project URL</label>
+
+                <input type="url"
+                       class="projectLink"
+                       placeholder="https://github.com/username/project">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Technologies Used</label>
+
+                <input type="text"
+                       class="projectTech"
+                       placeholder="HTML, CSS, JavaScript">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Description</label>
+
+                <textarea class="projectDescription"
+                          rows="5"
+                          placeholder="Describe your project..."></textarea>
+
+            </div>
+
+            <button type="button" class="remove-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Remove Project
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <button type="button"
+            id="addProject"
+            class="btn-primary">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Add Project
+
+    </button>
+
+</div>
+
+<!-- ================= CERTIFICATES ================= -->
+
+<div class="form-section">
+
+    <h3>
+        <i class="fa-solid fa-award"></i>
+        Certificates
+    </h3>
+
+    <div id="certificateContainer">
+
+        <div class="certificate-item">
+
+            <div class="form-group">
+
+                <label>Certificate Name</label>
+
+                <input type="text"
+                       class="certificateName"
+                       placeholder="Google UX Design">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Organization</label>
+
+                <input type="text"
+                       class="certificateOrg"
+                       placeholder="Google">
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Issue Date</label>
+
+                    <input type="month"
+                           class="certificateDate">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Credential URL</label>
+
+                    <input type="url"
+                           class="certificateLink"
+                           placeholder="https://...">
+
+                </div>
+
+            </div>
+
+            <button type="button"
+                    class="remove-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Remove Certificate
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <button type="button"
+            id="addCertificate"
+            class="btn-primary">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Add Certificate
+
+    </button>
+
+</div>
+
+<!-- ================= REFERENCES ================= -->
+
+<div class="form-section">
+
+    <h3>
+        <i class="fa-solid fa-user-group"></i>
+        References
+    </h3>
+
+    <div id="referenceContainer">
+
+        <div class="reference-item">
+
+            <div class="form-group">
+
+                <label>Reference Name</label>
+
+                <input type="text"
+                       class="referenceName"
+                       placeholder="John Smith">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Job Title</label>
+
+                <input type="text"
+                       class="referencePosition"
+                       placeholder="Senior Manager">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Company</label>
+
+                <input type="text"
+                       class="referenceCompany"
+                       placeholder="Microsoft">
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Email</label>
+
+                    <input type="email"
+                           class="referenceEmail"
+                           placeholder="john@email.com">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Phone</label>
+
+                    <input type="tel"
+                           class="referencePhone"
+                           placeholder="+92 300 1234567">
+
+                </div>
+
+            </div>
+
+            <button type="button"
+                    class="remove-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Remove Reference
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <button type="button"
+            id="addReference"
+            class="btn-primary">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Add Reference
+
+    </button>
+
+                  </div>
+  
