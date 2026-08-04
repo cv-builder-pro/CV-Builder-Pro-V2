@@ -1,1 +1,185 @@
+/* =========================================
+   Large Laptop
+========================================= */
 
+@media (max-width:1200px){
+
+.container{
+    width:92%;
+}
+
+.hero-left h1{
+    font-size:48px;
+}
+
+}
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width:992px){
+
+.header .container{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.hero-content{
+
+    flex-direction:column-reverse;
+
+    text-align:center;
+
+}
+
+.hero-left h1{
+
+    font-size:42px;
+
+}
+
+.hero-left p{
+
+    font-size:17px;
+
+}
+
+.feature-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width:768px){
+
+.hero{
+
+    padding:60px 0;
+
+}
+
+.hero-left h1{
+
+    font-size:34px;
+
+}
+
+.hero-left p{
+
+    font-size:16px;
+
+}
+
+.header-buttons{
+
+    flex-direction:column;
+
+    width:100%;
+
+}
+
+.btn-login,
+.btn-primary{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.feature-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.features h2{
+
+    font-size:28px;
+
+}
+
+.footer{
+
+    font-size:14px;
+
+}
+
+}
+
+/* =========================================
+   Small Mobile
+========================================= */
+
+@media (max-width:480px){
+
+.container{
+
+    width:94%;
+
+}
+
+.logo img{
+
+    height:38px;
+
+}
+
+.nav{
+
+    gap:15px;
+
+}
+
+.nav a{
+
+    font-size:14px;
+
+}
+
+.hero-left h1{
+
+    font-size:28px;
+
+}
+
+.hero-left p{
+
+    font-size:15px;
+
+}
+
+.feature-card{
+
+    padding:25px;
+
+}
+
+.btn-login,
+.btn-primary{
+
+    padding:12px 18px;
+
+    font-size:15px;
+
+}
+
+}
