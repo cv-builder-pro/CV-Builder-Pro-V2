@@ -399,3 +399,127 @@ a{
     background:#1d4ed8;
 
 }
+/* ===========================
+   Statistics
+=========================== */
+
+.stats{
+
+    padding:80px 0;
+    background:#ffffff;
+
+}
+
+.stats-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+
+}
+
+.stat-card{
+
+    background:#f8fafc;
+    padding:35px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.stat-card h2{
+
+    font-size:42px;
+    font-family:"Poppins";
+    color:#2563eb;
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:#6b7280;
+
+}
+
+/* ===========================
+   Trusted
+=========================== */
+
+.trusted{
+
+    padding:80px 0;
+
+}
+
+.trusted h2{
+
+    text-align:center;
+    margin-bottom:40px;
+    font-family:"Poppins";
+    font-size:34px;
+
+}
+
+.trusted-grid{
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+
+}
+
+.trusted-card{
+
+    background:#ffffff;
+    padding:30px;
+    text-align:center;
+    border-radius:12px;
+    font-family:"Poppins";
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.cta{
+
+    padding:100px 20px;
+    text-align:center;
+    background:#2563eb;
+    color:#ffffff;
+
+}
+
+.cta h2{
+
+    font-size:42px;
+    font-family:"Poppins";
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    max-width:700px;
+    margin:0 auto 35px;
+    line-height:1.8;
+    font-size:18px;
+
+}
+
+.cta .btn-primary{
+
+    background:#ffffff;
+    color:#2563eb;
+}
+
+.cta .btn-primary:hover{
+
+    background:#f3f4f6;
+
+}
