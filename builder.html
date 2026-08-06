@@ -4,18 +4,23 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Resume Builder | CV Builder Pro AI</title>
 
     <!-- CSS -->
+
     <link rel="stylesheet" href="assets/css/main.css">
+
     <link rel="stylesheet" href="assets/css/builder.css">
+
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <!-- Font Awesome -->
+
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="icon" href="assets/images/logo/favicon.png">
 
@@ -31,27 +36,34 @@
 
         <a href="index.html" class="logo">
 
-            <img src="assets/images/logo/logo.png" alt="Logo">
+            <img src="assets/images/logo/logo.png" alt="CV Builder Pro">
 
         </a>
 
         <nav class="nav">
 
             <a href="index.html">Home</a>
+
             <a href="templates.html">Templates</a>
+
             <a href="pricing.html">Pricing</a>
+
             <a href="dashboard.html">Dashboard</a>
 
         </nav>
 
         <div class="header-buttons">
 
-            <a href="profile.html" class="btn-login">
-                My Profile
+            <a href="login.html" class="btn-login">
+
+                Login
+
             </a>
 
-            <a href="dashboard.html" class="btn-primary">
-                Dashboard
+            <a href="profile.html" class="btn-primary">
+
+                My Profile
+
             </a>
 
         </div>
@@ -60,122 +72,91 @@
 
 </header>
 
-<!-- ================= BUILDER ================= -->
+<!-- ================= BUILDER PAGE ================= -->
 
-<section class="builder-section">
+<section class="builder-page">
 
     <div class="builder-container">
 
-        <!-- LEFT PANEL -->
+        <!-- Page Title -->
 
-        <aside class="builder-sidebar">
+        <div class="builder-header">
 
-            <h2>
+            <div class="builder-title">
 
-                <i class="fa-solid fa-file-lines"></i>
+                <h1>
 
-                Resume Builder
-
-            </h2>
-
-            <ul class="builder-menu">
-
-                <li><i class="fa-solid fa-user"></i> Personal Info</li>
-
-                <li><i class="fa-solid fa-graduation-cap"></i> Education</li>
-
-                <li><i class="fa-solid fa-briefcase"></i> Experience</li>
-
-                <li><i class="fa-solid fa-code"></i> Skills</li>
-
-                <li><i class="fa-solid fa-folder-open"></i> Projects</li>
-
-                <li><i class="fa-solid fa-language"></i> Languages</li>
-
-                <li><i class="fa-solid fa-award"></i> Certificates</li>
-
-                <li><i class="fa-solid fa-share-nodes"></i> Social Links</li>
-
-            </ul>
-
-        </aside>
-
-        <!-- FORM AREA -->
-
-        <main class="builder-form">
-
-            <div class="form-card">
-
-                <h2>
-
-                    Resume Information
-
-                </h2>
-
-                <p>
-
-                    Complete your resume step by step.
-
-                </p>
-
-                <!-- Part 2 se form yahan shuru hoga -->
-
-            </div>
-
-        </main>
-
-        <!-- LIVE PREVIEW -->
-
-        <aside class="resume-preview">
-
-            <div class="resume-paper">
-
-                <h1 id="previewName">
-
-                    Your Name
+                    Resume Builder
 
                 </h1>
 
-                <h3 id="previewTitle">
-
-                    Professional Title
-
-                </h3>
-
-                <hr>
-
                 <p>
 
-                    Live Resume Preview will appear here.
+                    Create a professional ATS-friendly resume with live preview.
 
                 </p>
 
             </div>
 
-        </aside>
+            <div class="builder-actions">
 
-    </div>
+                <button type="button" class="btn btn-outline">
 
-</section>
+                    <i class="fa-solid fa-eye"></i>
 
-<!-- ================= PERSONAL INFORMATION ================= -->
+                    Preview
+
+                </button>
+
+                <button type="button" class="btn btn-primary" id="downloadResume">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    Download PDF
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Main Layout -->
+
+        <div class="builder-grid">
+
+            <!-- ================= LEFT SIDE ================= -->
+
+            <div class="builder-form">
+
+                <!-- Part 2 Start Here -->
+                <!-- ================= PERSONAL INFORMATION ================= -->
 
 <div class="form-section">
 
     <h3>
+
         <i class="fa-solid fa-user"></i>
+
         Personal Information
+
     </h3>
 
     <!-- Profile Photo -->
 
-    <div class="form-group">
+    <div class="photo-upload">
 
-        <label>Profile Photo</label>
+        <div class="photo-preview">
 
-        <input type="file"
-               id="profilePhoto"
-               accept="image/*">
+            <img id="previewPhoto"
+                 src="assets/images/avatars/default.png"
+                 alt="Profile Photo">
+
+        </div>
+
+        <input
+            type="file"
+            id="profilePhoto"
+            accept="image/*">
 
     </div>
 
@@ -185,9 +166,10 @@
 
         <label>Full Name</label>
 
-        <input type="text"
-               id="fullName"
-               placeholder="Enter your full name">
+        <input
+            type="text"
+            id="fullName"
+            placeholder="John Smith">
 
     </div>
 
@@ -197,33 +179,38 @@
 
         <label>Professional Title</label>
 
-        <input type="text"
-               id="jobTitle"
-               placeholder="Frontend Developer">
+        <input
+            type="text"
+            id="jobTitle"
+            placeholder="Frontend Developer">
 
     </div>
 
-    <!-- Email -->
+    <!-- Email + Phone -->
 
-    <div class="form-group">
+    <div class="form-row">
 
-        <label>Email Address</label>
+        <div class="form-group">
 
-        <input type="email"
-               id="email"
-               placeholder="example@email.com">
+            <label>Email</label>
 
-    </div>
+            <input
+                type="email"
+                id="email"
+                placeholder="john@email.com">
 
-    <!-- Phone -->
+        </div>
 
-    <div class="form-group">
+        <div class="form-group">
 
-        <label>Phone Number</label>
+            <label>Phone</label>
 
-        <input type="tel"
-               id="phone"
-               placeholder="+92 300 1234567">
+            <input
+                type="tel"
+                id="phone"
+                placeholder="+92 300 1234567">
+
+        </div>
 
     </div>
 
@@ -233,9 +220,10 @@
 
         <label>Address</label>
 
-        <input type="text"
-               id="address"
-               placeholder="Lahore, Pakistan">
+        <input
+            type="text"
+            id="address"
+            placeholder="Lahore, Pakistan">
 
     </div>
 
@@ -245,9 +233,10 @@
 
         <label>LinkedIn</label>
 
-        <input type="url"
-               id="linkedin"
-               placeholder="https://linkedin.com/in/username">
+        <input
+            type="url"
+            id="linkedin"
+            placeholder="https://linkedin.com/in/username">
 
     </div>
 
@@ -257,49 +246,67 @@
 
         <label>GitHub</label>
 
-        <input type="url"
-               id="github"
-               placeholder="https://github.com/username">
+        <input
+            type="url"
+            id="github"
+            placeholder="https://github.com/username">
 
     </div>
 
-    <!-- Website -->
+    <!-- Portfolio -->
 
     <div class="form-group">
 
         <label>Portfolio Website</label>
 
-        <input type="url"
-               id="website"
-               placeholder="https://yourwebsite.com">
+        <input
+            type="url"
+            id="website"
+            placeholder="https://yourwebsite.com">
 
     </div>
 
-    <!-- Summary -->
+    <!-- Professional Summary -->
 
     <div class="form-group">
 
         <label>Professional Summary</label>
 
-        <textarea id="summary"
-                  rows="6"
-                  placeholder="Write a short professional summary..."></textarea>
+        <textarea
+            id="summary"
+            rows="6"
+            placeholder="Write a short professional summary..."></textarea>
 
     </div>
 
 </div>
-  <!-- ================= EDUCATION ================= -->
+
+<!-- ================= EDUCATION STARTS IN PART 3 ================= -->
+
+            </div>
+
+            <!-- ================= RIGHT SIDE ================= -->
+
+            <div class="resume-preview">
+
+                <div class="resume-paper">
+
+                    <!-- Part 7 Resume Preview Here -->
+                    <!-- ================= EDUCATION ================= -->
 
 <div class="form-section">
 
     <h3>
+
         <i class="fa-solid fa-graduation-cap"></i>
+
         Education
+
     </h3>
 
     <div id="educationContainer">
 
-        <!-- Education Block -->
+        <!-- Education Card -->
 
         <div class="education-item">
 
@@ -307,19 +314,21 @@
 
                 <label>Degree</label>
 
-                <input type="text"
-                       class="degree"
-                       placeholder="Bachelor of Computer Science">
+                <input
+                    type="text"
+                    class="degree"
+                    placeholder="Bachelor of Computer Science">
 
             </div>
 
             <div class="form-group">
 
-                <label>Institute / University</label>
+                <label>University / Institute</label>
 
-                <input type="text"
-                       class="institute"
-                       placeholder="University Name">
+                <input
+                    type="text"
+                    class="university"
+                    placeholder="University of Lahore">
 
             </div>
 
@@ -327,31 +336,49 @@
 
                 <div class="form-group">
 
-                    <label>Start Year</label>
+                    <label>Start Date</label>
 
-                    <input type="month"
-                           class="eduStart">
+                    <input
+                        type="month"
+                        class="educationStart">
 
                 </div>
 
                 <div class="form-group">
 
-                    <label>End Year</label>
+                    <label>End Date</label>
 
-                    <input type="month"
-                           class="eduEnd">
+                    <input
+                        type="month"
+                        class="educationEnd">
 
                 </div>
 
             </div>
 
-            <div class="form-group">
+            <div class="form-row">
 
-                <label>Grade / CGPA</label>
+                <div class="form-group">
 
-                <input type="text"
-                       class="grade"
-                       placeholder="3.80 CGPA / A Grade">
+                    <label>Grade / CGPA</label>
+
+                    <input
+                        type="text"
+                        class="educationGrade"
+                        placeholder="3.85 CGPA">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>City</label>
+
+                    <input
+                        type="text"
+                        class="educationCity"
+                        placeholder="Lahore">
+
+                </div>
 
             </div>
 
@@ -359,14 +386,16 @@
 
                 <label>Description</label>
 
-                <textarea class="eduDescription"
-                          rows="4"
-                          placeholder="Achievements, activities or relevant coursework..."></textarea>
+                <textarea
+                    class="educationDescription"
+                    rows="4"
+                    placeholder="Achievements, coursework, scholarships..."></textarea>
 
             </div>
 
-            <button type="button"
-                    class="remove-btn">
+            <button
+                type="button"
+                class="remove-btn">
 
                 <i class="fa-solid fa-trash"></i>
 
@@ -378,9 +407,10 @@
 
     </div>
 
-    <button type="button"
-            id="addEducation"
-            class="btn-primary">
+    <button
+        type="button"
+        id="addEducation"
+        class="btn btn-primary">
 
         <i class="fa-solid fa-plus"></i>
 
@@ -389,18 +419,24 @@
     </button>
 
 </div>
-  <!-- ================= EXPERIENCE ================= -->
+
+<!-- ================= EXPERIENCE STARTS IN PART 4 ================= -->
+                    
+                    <!-- ================= EXPERIENCE ================= -->
 
 <div class="form-section">
 
     <h3>
+
         <i class="fa-solid fa-briefcase"></i>
+
         Work Experience
+
     </h3>
 
     <div id="experienceContainer">
 
-        <!-- Experience Block -->
+        <!-- Experience Card -->
 
         <div class="experience-item">
 
@@ -408,9 +444,10 @@
 
                 <label>Job Title</label>
 
-                <input type="text"
-                       class="jobPosition"
-                       placeholder="Frontend Developer">
+                <input
+                    type="text"
+                    class="jobTitleInput"
+                    placeholder="Senior Frontend Developer">
 
             </div>
 
@@ -418,9 +455,10 @@
 
                 <label>Company Name</label>
 
-                <input type="text"
-                       class="companyName"
-                       placeholder="Google Inc.">
+                <input
+                    type="text"
+                    class="companyName"
+                    placeholder="Google">
 
             </div>
 
@@ -430,8 +468,9 @@
 
                     <label>Start Date</label>
 
-                    <input type="month"
-                           class="jobStart">
+                    <input
+                        type="month"
+                        class="jobStart">
 
                 </div>
 
@@ -439,8 +478,9 @@
 
                     <label>End Date</label>
 
-                    <input type="month"
-                           class="jobEnd">
+                    <input
+                        type="month"
+                        class="jobEnd">
 
                 </div>
 
@@ -450,22 +490,44 @@
 
                 <label>
 
-                    <input type="checkbox"
-                           class="currentlyWorking">
+                    <input
+                        type="checkbox"
+                        class="currentlyWorking">
 
-                    Currently Working Here
+                    I currently work here
 
                 </label>
 
             </div>
 
-            <div class="form-group">
+            <div class="form-row">
 
-                <label>Location</label>
+                <div class="form-group">
 
-                <input type="text"
-                       class="jobLocation"
-                       placeholder="Lahore, Pakistan">
+                    <label>Location</label>
+
+                    <input
+                        type="text"
+                        class="jobLocation"
+                        placeholder="Lahore, Pakistan">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Employment Type</label>
+
+                    <select class="employmentType">
+
+                        <option>Full Time</option>
+                        <option>Part Time</option>
+                        <option>Internship</option>
+                        <option>Freelance</option>
+                        <option>Contract</option>
+
+                    </select>
+
+                </div>
 
             </div>
 
@@ -473,14 +535,16 @@
 
                 <label>Job Description</label>
 
-                <textarea class="jobDescription"
-                          rows="6"
-                          placeholder="Describe your responsibilities, achievements and technologies used..."></textarea>
+                <textarea
+                    class="jobDescription"
+                    rows="6"
+                    placeholder="Describe your responsibilities, achievements and technologies used..."></textarea>
 
             </div>
 
-            <button type="button"
-                    class="remove-btn">
+            <button
+                type="button"
+                class="remove-btn">
 
                 <i class="fa-solid fa-trash"></i>
 
@@ -492,9 +556,10 @@
 
     </div>
 
-    <button type="button"
-            id="addExperience"
-            class="btn-primary">
+    <button
+        type="button"
+        id="addExperience"
+        class="btn btn-primary">
 
         <i class="fa-solid fa-plus"></i>
 
@@ -503,30 +568,57 @@
     </button>
 
 </div>
-  <!-- ================= SKILLS ================= -->
+
+<!-- ================= SKILLS STARTS IN PART 5 ================= -->
+                    <!-- ================= SKILLS ================= -->
 
 <div class="form-section">
 
     <h3>
+
         <i class="fa-solid fa-code"></i>
+
         Skills
+
     </h3>
 
     <div id="skillsContainer">
 
         <div class="skill-item">
 
-            <div class="form-group">
+            <div class="form-row">
 
-                <label>Skill</label>
+                <div class="form-group">
 
-                <input type="text"
-                       class="skillName"
-                       placeholder="HTML, CSS, JavaScript">
+                    <label>Skill</label>
+
+                    <input
+                        type="text"
+                        class="skillName"
+                        placeholder="JavaScript">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Skill Level</label>
+
+                    <select class="skillLevel">
+
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option selected>Advanced</option>
+                        <option>Expert</option>
+
+                    </select>
+
+                </div>
 
             </div>
 
-            <button type="button" class="remove-btn">
+            <button
+                type="button"
+                class="remove-btn">
 
                 <i class="fa-solid fa-trash"></i>
 
@@ -538,9 +630,10 @@
 
     </div>
 
-    <button type="button"
-            id="addSkill"
-            class="btn-primary">
+    <button
+        type="button"
+        id="addSkill"
+        class="btn btn-primary">
 
         <i class="fa-solid fa-plus"></i>
 
@@ -555,8 +648,11 @@
 <div class="form-section">
 
     <h3>
+
         <i class="fa-solid fa-language"></i>
+
         Languages
+
     </h3>
 
     <div id="languagesContainer">
@@ -569,20 +665,21 @@
 
                     <label>Language</label>
 
-                    <input type="text"
-                           class="languageName"
-                           placeholder="English">
+                    <input
+                        type="text"
+                        class="languageName"
+                        placeholder="English">
 
                 </div>
 
                 <div class="form-group">
 
-                    <label>Proficiency</label>
+                    <label>Level</label>
 
                     <select class="languageLevel">
 
-                        <option>Beginner</option>
-                        <option>Intermediate</option>
+                        <option>Basic</option>
+                        <option>Conversational</option>
                         <option selected>Professional</option>
                         <option>Native</option>
 
@@ -592,8 +689,9 @@
 
             </div>
 
-            <button type="button"
-                    class="remove-btn">
+            <button
+                type="button"
+                class="remove-btn">
 
                 <i class="fa-solid fa-trash"></i>
 
@@ -605,9 +703,10 @@
 
     </div>
 
-    <button type="button"
-            id="addLanguage"
-            class="btn-primary">
+    <button
+        type="button"
+        id="addLanguage"
+        class="btn btn-primary">
 
         <i class="fa-solid fa-plus"></i>
 
@@ -617,31 +716,36 @@
 
 </div>
 
-<!-- ================= HOBBIES ================= -->
+<!-- ================= INTERESTS ================= -->
 
 <div class="form-section">
 
     <h3>
+
         <i class="fa-solid fa-heart"></i>
-        Interests / Hobbies
+
+        Interests
+
     </h3>
 
-    <div id="hobbiesContainer">
+    <div id="interestsContainer">
 
-        <div class="hobby-item">
+        <div class="interest-item">
 
             <div class="form-group">
 
-                <label>Interest</label>
+                <label>Interest / Hobby</label>
 
-                <input type="text"
-                       class="hobbyName"
-                       placeholder="Reading, Traveling, Photography">
+                <input
+                    type="text"
+                    class="interestName"
+                    placeholder="Reading, Cricket, Photography">
 
             </div>
 
-            <button type="button"
-                    class="remove-btn">
+            <button
+                type="button"
+                class="remove-btn">
 
                 <i class="fa-solid fa-trash"></i>
 
@@ -653,9 +757,10 @@
 
     </div>
 
-    <button type="button"
-            id="addHobby"
-            class="btn-primary">
+    <button
+        type="button"
+        id="addInterest"
+        class="btn btn-primary">
 
         <i class="fa-solid fa-plus"></i>
 
@@ -664,13 +769,18 @@
     </button>
 
 </div>
-  <!-- ================= PROJECTS ================= -->
+
+<!-- ================= PROJECTS STARTS IN PART 6 ================= -->
+                    <!-- ================= PROJECTS ================= -->
 
 <div class="form-section">
 
     <h3>
+
         <i class="fa-solid fa-folder-open"></i>
+
         Projects
+
     </h3>
 
     <div id="projectsContainer">
@@ -681,9 +791,10 @@
 
                 <label>Project Name</label>
 
-                <input type="text"
-                       class="projectName"
-                       placeholder="CV Builder Pro AI">
+                <input
+                    type="text"
+                    class="projectName"
+                    placeholder="CV Builder Pro AI">
 
             </div>
 
@@ -691,9 +802,10 @@
 
                 <label>Project URL</label>
 
-                <input type="url"
-                       class="projectLink"
-                       placeholder="https://github.com/username/project">
+                <input
+                    type="url"
+                    class="projectUrl"
+                    placeholder="https://github.com/username/project">
 
             </div>
 
@@ -701,9 +813,10 @@
 
                 <label>Technologies Used</label>
 
-                <input type="text"
-                       class="projectTech"
-                       placeholder="HTML, CSS, JavaScript">
+                <input
+                    type="text"
+                    class="projectTech"
+                    placeholder="HTML, CSS, JavaScript, Firebase">
 
             </div>
 
@@ -711,13 +824,16 @@
 
                 <label>Description</label>
 
-                <textarea class="projectDescription"
-                          rows="5"
-                          placeholder="Describe your project..."></textarea>
+                <textarea
+                    class="projectDescription"
+                    rows="5"
+                    placeholder="Describe your project..."></textarea>
 
             </div>
 
-            <button type="button" class="remove-btn">
+            <button
+                type="button"
+                class="remove-btn">
 
                 <i class="fa-solid fa-trash"></i>
 
@@ -729,9 +845,10 @@
 
     </div>
 
-    <button type="button"
-            id="addProject"
-            class="btn-primary">
+    <button
+        type="button"
+        id="addProject"
+        class="btn btn-primary">
 
         <i class="fa-solid fa-plus"></i>
 
@@ -746,11 +863,14 @@
 <div class="form-section">
 
     <h3>
+
         <i class="fa-solid fa-award"></i>
+
         Certificates
+
     </h3>
 
-    <div id="certificateContainer">
+    <div id="certificatesContainer">
 
         <div class="certificate-item">
 
@@ -758,9 +878,10 @@
 
                 <label>Certificate Name</label>
 
-                <input type="text"
-                       class="certificateName"
-                       placeholder="Google UX Design">
+                <input
+                    type="text"
+                    class="certificateName"
+                    placeholder="Google UX Design">
 
             </div>
 
@@ -768,9 +889,10 @@
 
                 <label>Organization</label>
 
-                <input type="text"
-                       class="certificateOrg"
-                       placeholder="Google">
+                <input
+                    type="text"
+                    class="certificateOrg"
+                    placeholder="Google">
 
             </div>
 
@@ -780,8 +902,9 @@
 
                     <label>Issue Date</label>
 
-                    <input type="month"
-                           class="certificateDate">
+                    <input
+                        type="month"
+                        class="certificateDate">
 
                 </div>
 
@@ -789,16 +912,18 @@
 
                     <label>Credential URL</label>
 
-                    <input type="url"
-                           class="certificateLink"
-                           placeholder="https://...">
+                    <input
+                        type="url"
+                        class="certificateUrl"
+                        placeholder="https://...">
 
                 </div>
 
             </div>
 
-            <button type="button"
-                    class="remove-btn">
+            <button
+                type="button"
+                class="remove-btn">
 
                 <i class="fa-solid fa-trash"></i>
 
@@ -810,9 +935,10 @@
 
     </div>
 
-    <button type="button"
-            id="addCertificate"
-            class="btn-primary">
+    <button
+        type="button"
+        id="addCertificate"
+        class="btn btn-primary">
 
         <i class="fa-solid fa-plus"></i>
 
@@ -827,11 +953,14 @@
 <div class="form-section">
 
     <h3>
+
         <i class="fa-solid fa-user-group"></i>
+
         References
+
     </h3>
 
-    <div id="referenceContainer">
+    <div id="referencesContainer">
 
         <div class="reference-item">
 
@@ -839,9 +968,10 @@
 
                 <label>Reference Name</label>
 
-                <input type="text"
-                       class="referenceName"
-                       placeholder="John Smith">
+                <input
+                    type="text"
+                    class="referenceName"
+                    placeholder="John Smith">
 
             </div>
 
@@ -849,9 +979,10 @@
 
                 <label>Job Title</label>
 
-                <input type="text"
-                       class="referencePosition"
-                       placeholder="Senior Manager">
+                <input
+                    type="text"
+                    class="referencePosition"
+                    placeholder="Senior Manager">
 
             </div>
 
@@ -859,9 +990,10 @@
 
                 <label>Company</label>
 
-                <input type="text"
-                       class="referenceCompany"
-                       placeholder="Microsoft">
+                <input
+                    type="text"
+                    class="referenceCompany"
+                    placeholder="Microsoft">
 
             </div>
 
@@ -871,9 +1003,10 @@
 
                     <label>Email</label>
 
-                    <input type="email"
-                           class="referenceEmail"
-                           placeholder="john@email.com">
+                    <input
+                        type="email"
+                        class="referenceEmail"
+                        placeholder="john@email.com">
 
                 </div>
 
@@ -881,16 +1014,18 @@
 
                     <label>Phone</label>
 
-                    <input type="tel"
-                           class="referencePhone"
-                           placeholder="+92 300 1234567">
+                    <input
+                        type="tel"
+                        class="referencePhone"
+                        placeholder="+92 300 1234567">
 
                 </div>
 
             </div>
 
-            <button type="button"
-                    class="remove-btn">
+            <button
+                type="button"
+                class="remove-btn">
 
                 <i class="fa-solid fa-trash"></i>
 
@@ -902,9 +1037,10 @@
 
     </div>
 
-    <button type="button"
-            id="addReference"
-            class="btn-primary">
+    <button
+        type="button"
+        id="addReference"
+        class="btn btn-primary">
 
         <i class="fa-solid fa-plus"></i>
 
@@ -912,5 +1048,181 @@
 
     </button>
 
-                  </div>
-  
+</div>
+
+<!-- ================= RESUME PREVIEW STARTS IN PART 7 ================= -->
+                       <!-- ================= RESUME HEADER ================= -->
+
+<div class="resume-header">
+
+    <div class="resume-photo">
+
+        <img id="previewProfileImage"
+             src="assets/images/avatars/default.png"
+             alt="Profile">
+
+    </div>
+
+    <h1 id="previewName">
+
+        Your Name
+
+    </h1>
+
+    <h2 id="previewJobTitle">
+
+        Professional Title
+
+    </h2>
+
+    <div class="resume-contact">
+
+        <span id="previewEmail">example@email.com</span>
+
+        <span id="previewPhone">+92 300 1234567</span>
+
+        <span id="previewAddress">Lahore, Pakistan</span>
+
+    </div>
+
+</div>
+
+<!-- ================= SUMMARY ================= -->
+
+<div class="resume-section">
+
+    <h3>Professional Summary</h3>
+
+    <p id="previewSummary">
+
+        Your professional summary will appear here.
+
+    </p>
+
+</div>
+
+<!-- ================= EXPERIENCE ================= -->
+
+<div class="resume-section">
+
+    <h3>Work Experience</h3>
+
+    <div id="previewExperience">
+
+        <p>No experience added.</p>
+
+    </div>
+
+</div>
+
+<!-- ================= EDUCATION ================= -->
+
+<div class="resume-section">
+
+    <h3>Education</h3>
+
+    <div id="previewEducation">
+
+        <p>No education added.</p>
+
+    </div>
+
+</div>
+
+<!-- ================= SKILLS ================= -->
+
+<div class="resume-section">
+
+    <h3>Skills</h3>
+
+    <div id="previewSkills">
+
+        <p>No skills added.</p>
+
+    </div>
+
+</div>
+
+<!-- ================= PROJECTS ================= -->
+
+<div class="resume-section">
+
+    <h3>Projects</h3>
+
+    <div id="previewProjects">
+
+        <p>No projects added.</p>
+
+    </div>
+
+</div>
+
+<!-- ================= CERTIFICATES ================= -->
+
+<div class="resume-section">
+
+    <h3>Certificates</h3>
+
+    <div id="previewCertificates">
+
+        <p>No certificates added.</p>
+
+    </div>
+
+</div>
+
+<!-- ================= LANGUAGES ================= -->
+
+<div class="resume-section">
+
+    <h3>Languages</h3>
+
+    <div id="previewLanguages">
+
+        <p>No languages added.</p>
+
+    </div>
+
+</div>
+
+<!-- ================= INTERESTS ================= -->
+
+<div class="resume-section">
+
+    <h3>Interests</h3>
+
+    <div id="previewInterests">
+
+        <p>No interests added.</p>
+
+    </div>
+
+</div>
+
+<!-- ================= REFERENCES ================= -->
+
+<div class="resume-section">
+
+    <h3>References</h3>
+
+    <div id="previewReferences">
+
+        <p>Available upon request.</p>
+
+    </div>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="assets/js/builder.js"></script>
+
+</body>
+
+</html>                                     
